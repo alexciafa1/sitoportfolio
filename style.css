@@ -85,6 +85,50 @@ div ul li span {
     border-radius: 40%;
 }
 
+.logo_list {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    height: 100px;
+    white-space: nowrap;
+    animation: bannermove 50s linear infinite;
+}
+
+.logo_list2 {
+    display: none;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    white-space: nowrap;
+    animation: bannermove 50s linear infinite;
+    animation-direction: reverse;
+   
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0); /* The image width */
+    }
+
+}
+
+@keyframes bannermove2 {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, -100%); /* The image width */
+    }
+
+}
+
+
+
 
 @media screen and(max-width: 1024px) {
     .directory_bar {
@@ -102,4 +146,12 @@ div ul li span {
         text-decoration: none;
     }
 
+    
+    .logo_list2 {
+        display:block;
+        overflow: hidden;
+        animation: bannermove 20s linear infinite;
+        animation-direction:reverse;
+
+    }
 }
