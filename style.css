@@ -43,7 +43,13 @@ nav img {
     width: 150px;
     border-radius: 50%;
     animation-delay: 3s;
+    transition: transform 0.2s;
 }
+
+nav img:hover {
+    transform: scale(1.1);
+}
+
 
 .directory_bar {
     height: 60px;
@@ -72,10 +78,13 @@ div ul li {
     padding-left: 10px;
     margin-left: auto;
     margin-right: auto;
+    transition: transform 0.2s;
 
 }
 .button:hover {
-    text-decoration: underline;
+    transform: scale(1.2);
+
+
 }
 
 div ul li span {
@@ -86,25 +95,52 @@ div ul li span {
 }
 
 .logo_list {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
-
-    height: 100px;
+    height: 130px;
     white-space: nowrap;
     animation: bannermove 50s linear infinite;
+    overflow:hidden;
+    transition: transform 0.2s;
+
 }
 
+.logo_list li {
+    padding: 20px;
+}
+
+.logo_list li:hover {
+    transform: scale(1.2);
+}
+
+.logo_bar{
+background-color: rgb(228, 228, 228);
+}
+
+.logo_bar2{
+    overflow: hidden;
+    background-color: rgb(228, 228, 228);
+}
+
+
+
 .logo_list2 {
-    display: none;
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    height: 130px;
     white-space: nowrap;
-    animation: bannermove 50s linear infinite;
-    animation-direction: reverse;
-   
+    animation: bannermove2 50s linear infinite;
+    transition: transform 0.2s;
+}
+
+.logo_list2 li {
+    padding: 20px;
+}
+
+.logo_list2 li:hover {
+    transform: scale(1.2);
 }
 
 @keyframes bannermove {
@@ -122,15 +158,28 @@ div ul li span {
         transform: translate3d(0, 0, 0);
     }
     100% {
-        transform: translate3d(0, 0, -100%); /* The image width */
+        transform: translate3d(100%, 0, 0); /* The image width */
     }
 
 }
 
+.h1_app{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: rgb(38, 56, 158);
+}
 
 
-
-@media screen and(max-width: 1024px) {
+@media screen and(max-width: 828px) {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    
+    }
     .directory_bar {
         width: 80%;
         background-color: #333;
@@ -146,12 +195,16 @@ div ul li span {
         text-decoration: none;
     }
 
-    
-    .logo_list2 {
-        display:block;
+    .logo_list {
         overflow: hidden;
-        animation: bannermove 20s linear infinite;
-        animation-direction:reverse;
+    }
+
+
+    .logo_list2{
+        display: none;
+        overflow: hidden;
+        animation: bannermove 10s linear infinite;
+        animation-direction: reverse;
 
     }
 }
