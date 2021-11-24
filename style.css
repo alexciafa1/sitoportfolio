@@ -14,6 +14,17 @@ body {
     background-color: rgb(228, 228, 228);
 }
 
+.div_dark_mode{
+    align-items: center;
+    background-color: chartreuse;
+}
+.button_dark_mode{
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 50px;
+}
+
 
 .nome {
     padding-top: 50px;
